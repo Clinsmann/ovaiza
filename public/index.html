@@ -26,18 +26,21 @@
       <div class="card">
         <div class="base-field">
           <label for="walletAmount">Amount in wallet</label>
-          <input type="text" id="walletAmount" />
+          <input id="walletAmount" type="number"/>
+          <label class="error" id="walletAmountError"></label>
         </div>
 
         <div class="group">
           <div class="base-field">
             <label for="pricePerBag">Price per bag</label>
-            <input type="text" id="pricePerBag" />
+            <input id="pricePerBag" type="number"/>
+            <label class="error" id="pricePerBagError"></label>
           </div>
 
           <div class="base-field">
             <label for="profitPerBag">Profit per bag</label>
-            <input type="text" id="profitPerBag" />
+            <input id="profitPerBag" type="number"/>
+            <label class="error" id="profitPerBagError"></label>
           </div>
         </div>
 
@@ -54,7 +57,7 @@
         </div>
 
         <div class="group-button">
-          <div class="reset button">Reset</div>
+          <div class="reset button" onclick="reset()">Reset</div>
           <div class="submit button" onclick="calculateProfit()">Calculate</div>
         </div>
       </div>

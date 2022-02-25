@@ -36,6 +36,16 @@ label {
   font-weight: medium;
 }
 
+label.error{
+  padding: 0;
+  margin: 0;
+  color:#FF7F50	;
+  font-size: 12px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  padding: 5px 0 0;
+}
+
 .container {
   max-width: 450px;
   display: flex;
@@ -63,7 +73,7 @@ input:focus, textarea:focus, select:focus{
 
 input {
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 5px 10px;
   height: 40px;
   box-sizing: border-box;
@@ -72,6 +82,7 @@ input {
   color: #E5E4E2;
   font-weight: medium;
   transition: all .3s;
+  font-family: "Nunito", sans-serif;
 }
 
 input:hover{
@@ -93,7 +104,7 @@ input:disabled{
   flex-grow: 1;
   width: 50%;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 4px;
   text-align: center;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -121,7 +132,7 @@ input:disabled{
 
 @media only screen and (max-width: 600px) {
   .container{
-    width: 380px;
+    width: 340px;
   }
 
   .group{
