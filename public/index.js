@@ -1,5 +1,4 @@
 (() => {
-  document.getElementById("ownersPercentage").value = '30%';
   document.getElementById("customersPercentage").value = '70%';
 })();
 
@@ -34,11 +33,9 @@ function doValidation() {
 function calculateProfit() {
   prepareElements();
   doValidation();
-  const ownersPercentage = 0.3;
   const customersPercentage = 0.7;
   const totalBagsBought = Math.floor(parseInt(inputs.walletAmount.value)) / parseInt(inputs.pricePerBag.value);
   const totalProfit = totalBagsBought * parseInt(inputs.profitPerBag.value);
-  const ownersProfit = ownersPercentage * totalProfit;
   const customersProfit = customersPercentage * totalProfit;
   if(isNaN(customersProfit)) return;
   document.getElementById("profit").innerHTML = `&#8358; ${customersProfit}`;
