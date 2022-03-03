@@ -1,19 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #2b3743;
-  margin-top: 40px;
-  font-family: "Nunito", sans-serif;
   color: white;
   font-size: 16px;
-}
-
-.profit-container {
-
-}
-
-.profit{
-
+  margin-top: 40px;
+  background-color: #2b3743;
+  font-family: "Nunito", sans-serif;
 }
 
 .result {
@@ -21,36 +13,57 @@ body {
   margin-bottom: 20px;
 }
 
+footer {
+  padding-top: 30px;
+  text-align: center;
+  display: flex;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer .icon{
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+}
+
+.icon svg{
+  fill: tomato;
+}
+
 .card {
+  padding: 25px;
   border-radius: 5px;
   background-color: #27303d;
-  padding: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 }
 
 label {
-  font-size: 14px;
-  margin-bottom: 8px;
   width: 100%;
   color: #A9A9A9;
+  font-size: 14px;
+  margin-bottom: 8px;
   font-weight: medium;
 }
 
 label.error{
   padding: 0;
   margin: 0;
-  color:#FF7F50	;
+  color:#FF7F50;
   font-size: 12px;
-  font-family: "Nunito", sans-serif;
   font-weight: 300;
   padding: 5px 0 0;
+  font-family: "Nunito", sans-serif;
 }
 
 .container {
-  max-width: 450px;
   display: flex;
-  flex-direction: column;
   margin: 0 auto;
+  max-width: 450px;
+  flex-direction: column;
 }
 
 .group-button {
@@ -59,11 +72,11 @@ label.error{
 }
 
 .base-field {
-  display: flex;
-  flex-direction: column;
   width: 100%;
+  display: flex;
   padding: 0 0 10px 0;
   margin-bottom: 15px;
+  flex-direction: column;
 }
 
 input:focus, textarea:focus, select:focus{
@@ -71,16 +84,16 @@ input:focus, textarea:focus, select:focus{
 }
 
 input {
-  font-size: 16px;
-  border-radius: 4px;
-  padding: 5px 10px;
   height: 40px;
+  font-size: 16px;
+  color: #E5E4E2;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: medium;
+  transition: all .3s;
   box-sizing: border-box;
   border: 1px solid #414356;
   background-color: transparent;
-  color: #E5E4E2;
-  font-weight: medium;
-  transition: all .3s;
   font-family: "Nunito", sans-serif;
 }
 
@@ -89,27 +102,27 @@ input:hover{
 }
 
 input:focus{
-  background-color: white;
   color: rgb(32, 45, 47);
+  background-color: white;
 }
 
 input:disabled{
+  color: #A9A9A9;
   cursor: not-allowed;
   background-color: #383a49;
-  color: #A9A9A9;
 }
 
 .button{
-  flex-grow: 1;
   width: 50%;
+  flex-grow: 1;
+  height: 42px;    
   padding: 10px;
+  cursor: pointer;
   border-radius: 4px;
   text-align: center;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
   transition: all .3s;
   box-sizing: border-box;
-  height: 42px;    
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .submit {
