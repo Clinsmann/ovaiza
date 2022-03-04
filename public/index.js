@@ -41,6 +41,7 @@ const cleanValue = (val) => {
 };
 
 const reset = () => {
+  document.getElementById("profit").innerHTML = '';
   Object.values(inputs).forEach((input) => (input.value = ""));
   Object.values(errors).forEach((input) => (input.innerHTML = ""));
 };
@@ -55,7 +56,8 @@ const calculateProfit = () => {
     totalBagsBought * parseInt(cleanValue(inputs.profitPerBag.value));
   const customersProfit = customersPercentage * totalProfit;
   if (isNaN(customersProfit)) return;
-  document.getElementById("profit").innerHTML = formatNumber(customersProfit);
+  document.getElementById("profit").innerHTML = formatNumber(Math.floor(customersProfit));
+  document.getElementById("totalBags").innerHTML = Math.floor(totalBagsBought).toLocaleString();
 };
 
 Object.values(inputs).forEach((element) => {
