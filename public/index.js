@@ -49,15 +49,17 @@ const reset = () => {
 const calculateProfit = () => {
   doValidation();
   const customersPercentage = 0.7;
-  const totalBagsBought =
-    Math.floor(parseInt(cleanValue(inputs.walletAmount.value))) /
-    parseInt(cleanValue(inputs.pricePerBag.value));
-  const totalProfit =
-    totalBagsBought * parseInt(cleanValue(inputs.profitPerBag.value));
+  const amountInWallet = Math.floor(cleanValue(inputs.walletAmount.value));
+  const profitPerBag = Math.floor(cleanValue(inputs.profitPerBag.value));
+  const pricePerBag = Math.floor(cleanValue(inputs.pricePerBag.value));
+  const totalBagsBought = Math.floor(amountInWallet/pricePerBag);
+  const totalProfit = totalBagsBought * profitPerBag;
   const customersProfit = customersPercentage * totalProfit;
+
   if (isNaN(customersProfit)) return;
-  document.getElementById("profit").innerHTML = formatNumber(Math.floor(customersProfit));
-  document.getElementById("totalBags").innerHTML = Math.floor(totalBagsBought).toLocaleString();
+
+  document.getElementById("totalBags").innerHTML = totalBagsBought.toLocaleString();
+  document.getElementById("profit").innerHTML = formatNumber(customersProfit);
 };
 
 Object.values(inputs).forEach((element) => {
