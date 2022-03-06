@@ -54,7 +54,7 @@ const calculateProfit = () => {
   const pricePerBag = Math.floor(cleanValue(inputs.pricePerBag.value));
   const totalBagsBought = Math.floor(amountInWallet/pricePerBag);
   const totalProfit = totalBagsBought * profitPerBag;
-  const customersProfit = customersPercentage * totalProfit;
+  const customersProfit = Math.floor(customersPercentage * totalProfit);
 
   if (isNaN(customersProfit)) return;
 
