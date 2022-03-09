@@ -10,7 +10,7 @@ app.get("/hello", function (req, res) {
 });
 
 app.get("/plantain", function (req, res) {
-  res.sendFile(path.join(__dirname, "/plantain.html"));
+  res.sendFile(path.join(__dirname, "/public/plantain.html"));
 });
 
 app.listen(PORT, () => console.log(`Server is running on port: ${PORT}...`));
